@@ -1,5 +1,5 @@
 getter&setter  단축키 -> control+enter 대박
-
+option+enter ->implement method 
 //////////////////////
 
 정적컨텐츠 - resources/static에 파일을 만들면 됨
