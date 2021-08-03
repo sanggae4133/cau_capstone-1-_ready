@@ -1,14 +1,28 @@
 package service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import repository.MemberRepository;
 import repository.MemoryMemberRepository;
 import java.util.List;
 import domain.Member;
 
 import java.util.Optional;
 
+@Service
 public class Memberservice {
-    
+    /*
     private final MemoryMemberRepository memberRepository=new MemoryMemberRepository();
+    매번 다른 객체를 생성하지만 같은 store을 사용해야한다. store가 static이라 지금은 공유하지만
+    안썻을 경우 공유하기위해선 아래처럼 바꾸어 주어야한다.test클래스와 그냥클래스는 같은 store가능
+    */
+    private final MemberRepository memberRepository;
+
+    @Autowired
+    public Memberservice(MemberRepository memberRepository) {
+        this.memberRepository=memberRepository;
+    }
+
 
     /**
      * 회원가입
