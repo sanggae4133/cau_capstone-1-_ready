@@ -1,4 +1,4 @@
-package repository;
+package hello.hellospring.repository;
 
 import domain.Member;
 import org.springframework.stereotype.Repository;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 
-@Repository
+
 public class MemoryMemberRepository implements MemberRepository{
     private static Map<Long,Member> store=new HashMap<>(); //원래는 동시성 문제때문에 concurrent hash맵을 써야함
     private static long sequence=0L; //이것도 동시성 문제로 다른 것으로 처리하는 게 맞음

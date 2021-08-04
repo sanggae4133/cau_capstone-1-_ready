@@ -1,4 +1,4 @@
-package repository;
+package hello.hellospring.repository;
 import java.util.List;
 import domain.Member;
 

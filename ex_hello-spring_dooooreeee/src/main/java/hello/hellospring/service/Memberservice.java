@@ -1,15 +1,15 @@
-package service;
+package hello.hellospring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.MemberRepository;
-import repository.MemoryMemberRepository;
+import hello.hellospring.repository.MemberRepository;
+
 import java.util.List;
 import domain.Member;
 
 import java.util.Optional;
 
-@Service
+
 public class Memberservice {
     /*
     private final MemoryMemberRepository memberRepository=new MemoryMemberRepository();
@@ -18,8 +18,8 @@ public class Memberservice {
     */
     private final MemberRepository memberRepository;
 
-    @Autowired
-    public Memberservice(MemberRepository memberRepository) {
+
+    public Memberservice(MemberRepository memberRepository) { //생성자 주입
         this.memberRepository=memberRepository;
     }
 
