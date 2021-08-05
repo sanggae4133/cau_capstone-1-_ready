@@ -1,11 +1,9 @@
 package hello.hellospring.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import hello.hellospring.repository.MemberRepository;
 
 import java.util.List;
-import domain.Member;
+import hello.hellospring.domain.Member;
 
 import java.util.Optional;
 
@@ -49,6 +47,6 @@ public class Memberservice {
     }
 
     public Optional<Member> findOne(Long memberId){
-        return memberRepository.findeById(memberId);
+        return memberRepository.findById(memberId);
     }
 }

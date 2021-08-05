@@ -1,6 +1,6 @@
 package service;
 
-import domain.Member;
+import hello.hellospring.domain.Member;
 import hello.hellospring.service.Memberservice;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
